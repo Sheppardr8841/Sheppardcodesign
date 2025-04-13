@@ -1,59 +1,173 @@
-<header>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sheppard & C. Design + Build</title>
+  <link href="https://fonts.googleapis.com/css2?family=Lato&family=Playfair+Display&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --green: #2D3E34;
+      --brown: #7A5E45;
+      --cream: #F2EEE3;
+      --gray: #4C4C4C;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Lato', sans-serif;
+      color: var(--gray);
+      background-color: var(--cream);
+    }
+    header {
+      background: var(--green);
+      color: var(--cream);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    header h1 { font-family: 'Playfair Display', serif; font-size: 1.5rem; }
+    nav a {
+      color: var(--cream);
+      margin-left: 1rem;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .hero {
+      background: url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c') center/cover no-repeat;
+      color: var(--cream);
+      text-align: center;
+      padding: 8rem 2rem;
+    }
+    .hero h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 3rem;
+    }
+    .hero p {
+      font-size: 1.25rem;
+      margin: 1rem 0 2rem;
+    }
+    .btn {
+      background: var(--brown);
+      color: var(--cream);
+      padding: 0.75rem 1.5rem;
+      border: none;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    section {
+      padding: 4rem 2rem;
+      max-width: 1200px;
+      margin: auto;
+    }
+    .services, .portfolio {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+    }
+    .service, .portfolio-item {
+      background: white;
+      padding: 1rem;
+      border: 1px solid #ddd;
+    }
+    .service img {
+      width: 40px;
+      margin-bottom: 1rem;
+    }
+    .testimonials, .contact {
+      background: var(--brown);
+      color: var(--cream);
+      padding: 4rem 2rem;
+    }
+    footer {
+      background: var(--green);
+      color: var(--cream);
+      text-align: center;
+      padding: 2rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Sheppard & C.</h1>
+    <nav>
+      <a href="#services">Services</a>
+      <a href="#portfolio">Portfolio</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
 
-<!--
-  <<< Author notes: Course header >>>
-  Include a 1280×640 image, course title in sentence case, and a concise description in emphasis.
-  In your repository settings: enable template repository, add your 1280×640 social image, auto delete head branches.
-  Add your open source license, GitHub uses MIT license.
--->
+  <section class="hero">
+    <h2>Your Vision. Our Craft.</h2>
+    <p>High-quality custom builds & interiors, done right.</p>
+    <button class="btn">Get a Quote</button>
+  </section>
 
-# GitHub Pages
+  <section id="about">
+    <h2>About Us</h2>
+    <p>With over 20 years in the trades, we bring experience, reliability, and passion to every project. We specialize in trim, interiors, decks, and complete custom work.</p>
+  </section>
 
-_Create a site or blog from your GitHub repositories with GitHub Pages._
+  <section id="services">
+    <h2>Services</h2>
+    <div class="services">
+      <div class="service">
+        <img src="https://img.icons8.com/ios-filled/50/hammer.png" alt="Trim Work" />
+        <h3>Interior Trim & Finish</h3>
+        <p>Detail-rich interior trim that elevates your space.</p>
+      </div>
+      <div class="service">
+        <img src="https://img.icons8.com/ios-filled/50/saw.png" alt="Custom Carpentry" />
+        <h3>Custom Carpentry</h3>
+        <p>Tailor-made features for function and beauty.</p>
+      </div>
+      <div class="service">
+        <img src="https://img.icons8.com/ios-filled/50/deck.png" alt="Decks" />
+        <h3>Decks & Porches</h3>
+        <p>Built for relaxation and long-lasting value.</p>
+      </div>
+      <div class="service">
+        <img src="https://img.icons8.com/ios-filled/50/renovation.png" alt="Renovations" />
+        <h3>Full-Service Renovations</h3>
+        <p>Complete updates done with care and expertise.</p>
+      </div>
+    </div>
+  </section>
 
-</header>
+  <section id="portfolio">
+    <h2>Portfolio</h2>
+    <div class="portfolio">
+      <div class="portfolio-item"><img src="https://images.unsplash.com/photo-1560185008-5c9d47b9fc86" alt="Project 1" width="100%"></div>
+      <div class="portfolio-item"><img src="https://images.unsplash.com/photo-1599423300746-b62533397364" alt="Project 2" width="100%"></div>
+      <div class="portfolio-item"><img src="https://images.unsplash.com/photo-1630510863203-7fc2a29c2c89" alt="Project 3" width="100%"></div>
+    </div>
+  </section>
 
-<!--
-  <<< Author notes: Step 2 >>>
-  Start this step by acknowledging the previous step.
-  Define terms and link to docs.github.com.
-  Historic note: previous version checked for empty pull request, changed to the correct theme `minima`.
--->
+  <section class="testimonials">
+    <h2>What Our Clients Say</h2>
+    <p>"The Sheppard team turned our ideas into a beautiful finished space. Highly recommend!"</p>
+    <p>"Professional, on-time, and meticulous craftsmanship."</p>
+  </section>
 
-## Step 2: Configure your site
+  <section id="contact" class="contact">
+    <h2>Contact Us</h2>
+    <form>
+      <input type="text" placeholder="Name" required /><br/><br/>
+      <input type="email" placeholder="Email" required /><br/><br/>
+      <input type="tel" placeholder="Phone" /><br/><br/>
+      <textarea placeholder="Message" rows="5" required></textarea><br/><br/>
+      <button class="btn" type="submit">Send Message</button>
+    </form>
+  </section>
 
-_You turned on GitHub Pages! :tada:_
+  <footer>
+    <p>&copy; 2025 Sheppard & C. Design + Build | Lic. #123456</p>
+  </footer>
+</body>
+</html>
 
-We'll work in a branch, `my-pages`, that I created for you to get this site looking great. :sparkle:
 
-Jekyll uses a file titled `_config.yml` to store settings for your site, your theme, and reusable content like your site title and GitHub handle. You can check out the `_config.yml` file on the **Code** tab of your repository.
 
-We need to use a blog-ready theme. For this activity, we will use a theme named "minima".
-
-### :keyboard: Activity: Configure your site
-
-1. Browse to the `_config.yml` file in the `my-pages` branch.
-1. In the upper right corner, open the file editor.
-1. Add a `theme:` set to **minima** so it shows in the `_config.yml` file as below:
-   ```yml
-   theme: minima
-   ```
-1. (optional) You can modify the other configuration variables such as `title:`, `author:`, and `description:` to further customize your site.
-1. Commit your changes.
-1. (optional) Create a pull request to view all the changes you'll make throughout this course. Click the **Pull Requests** tab, click **New pull request**, set `base: main` and `compare:my-pages`.
-1. Wait about 20 seconds then refresh this page (the one you're following instructions from). [GitHub Actions](https://docs.github.com/en/actions) will automatically update to the next step.
-
-<footer>
-
-<!--
-  <<< Author notes: Footer >>>
-  Add a link to get support, GitHub status page, code of conduct, license link.
--->
-
----
-
-Get help: [Post in our discussion board](https://github.com/orgs/skills/discussions/categories/github-pages) &bull; [Review the GitHub status page](https://www.githubstatus.com/)
-
-&copy; 2023 GitHub &bull; [Code of Conduct](https://www.contributor-covenant.org/version/2/1/code_of_conduct/code_of_conduct.md) &bull; [MIT License](https://gh.io/mit)
-
-</footer>
